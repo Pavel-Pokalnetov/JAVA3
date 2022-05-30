@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class Race {
     private ArrayList<Stage> stages;
+    public boolean isStarted = false;
 
     public ArrayList<Stage> getStages() {
         return stages;
