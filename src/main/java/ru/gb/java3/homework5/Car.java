@@ -41,6 +41,7 @@ public class Car implements Runnable {
         if (!race.isStarted) {
             race.isStarted = true;
             Stopwatch.init();
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
         }
         for (int i = 0; i < race.getStages().size(); i++) {
             race.getStages().get(i).go(this);
