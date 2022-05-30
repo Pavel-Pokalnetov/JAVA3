@@ -18,15 +18,15 @@ public class Car implements Runnable {
         this.race = race;
         this.speed = speed;
         CARS_COUNT++;
-        this.name = "Участник #" + CARS_COUNT;
+        this.name = "РЈС‡Р°СЃС‚РЅРёРє #" + CARS_COUNT;
     }
 
     @Override
     public void run() {
         try {
-            System.out.println(this.name + " готовится");
+            System.out.println(this.name + " РіРѕС‚РѕРІРёС‚СЃСЏ");
             Thread.sleep(500 + (int) (Math.random() * 800));
-            System.out.println(this.name + " готов");
+            System.out.println(this.name + " РіРѕС‚РѕРІ");
         } catch (Exception e) {
             e.printStackTrace();
         }

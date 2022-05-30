@@ -1,7 +1,4 @@
-import ru.gb.java3.homework5.Car;
-import ru.gb.java3.homework5.Race;
-import ru.gb.java3.homework5.Road;
-import ru.gb.java3.homework5.Tunnel;
+package ru.gb.java3.homework5;
 
 public class MainRace {
     public static final int CARS_COUNT = 4;
