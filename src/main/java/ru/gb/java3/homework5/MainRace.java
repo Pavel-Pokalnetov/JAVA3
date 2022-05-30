@@ -38,8 +38,7 @@ public class MainRace {
             carsThreads.execute(new Thread(cars[i]));
         }
 
-        while (carsThreads.getActiveCount() > 0) {
-        }
+        while (carsThreads.getActiveCount() > 0) {}//ждем окончания заезда
         carsThreads.shutdown();
         System.out.println(Stopwatch.getState() + ": " + "ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!\n\n");
         System.out.println("Результаты гонки:");

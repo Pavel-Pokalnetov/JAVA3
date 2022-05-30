@@ -8,7 +8,7 @@ public class Car implements Runnable {
     private Race race;
     private int speed;
     private String name;
-    public static CountDownLatch raceStart;
+    public static CountDownLatch raceStart;//светофор для старта
 
     public String getName() {
         return name;
@@ -33,10 +33,14 @@ public class Car implements Runnable {
             Thread.sleep(500 + (int) (Math.random() * 800));
             raceStart.countDown();
             System.out.println(this.name + " готов");
-            raceStart.await();
-
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                raceStart.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         if (!race.isStarted) {
             race.isStarted = true;
