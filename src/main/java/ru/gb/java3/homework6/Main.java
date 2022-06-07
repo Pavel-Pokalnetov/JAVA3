@@ -1,5 +1,6 @@
 package ru.gb.java3.homework6;
 
+
 import java.util.Arrays;
 
 public class Main {
@@ -15,11 +16,12 @@ public class Main {
         if (i == array.length - 1 || !flag) {
             throw new RuntimeException();
         }
+        Integer[] result = new int[];
         return Arrays.copyOfRange(array, i + 1, array.length - 1);
 
     }
 
-    private boolean checkArray(Integer[] array) {
+    private boolean checkArray(int[] array) {
         boolean n1 = false, n4 = false;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 1) {
