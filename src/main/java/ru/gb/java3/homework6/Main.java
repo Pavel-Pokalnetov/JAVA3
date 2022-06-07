@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import java.util.*;
 import java.util.stream.Stream;
 
-
 public class Main {
     private int[] remakeArray(int[] array) {
         boolean flag = false;
